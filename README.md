@@ -2,46 +2,41 @@
 
 > _Based on [prettier-setup](https://github.com/lipis/prettier-setup) by the amazing [@lipis](https://github.com/lipis)._ 🙏
 
-This project sets up formatting and linting tools to keep your code clean and consistent, so you never have to argue about style again:
+This project sets up formatting tools to keep your code clean and consistent, so you never have to argue about style again:
 
 - [Prettier](https://prettier.io) is an opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules.
-- [ESLint](https://eslint.org) checks JavaScript code for stylistic or programming errors.
-- [Husky](https://github.com/typicode/husky) uses Git hooks to ensure that **Prettier** and **ESLint** run on all staged changes to fix files before committing.
+- [Husky](https://github.com/typicode/husky) uses Git hooks to ensure that **Prettier** runs on all staged changes to fix files before committing.
 
-The setup described here will format JavaScript, JSON, Sass, Markdown, and YAML files, but you can adjust the settings to your own needs.
+The setup described here will format DITA XML, JSON, Sass, Markdown, and YAML files, but you can adjust the settings to your own needs.
 
-## Installing ESLint and Prettier
+## Installing Prettier and the XML plugin
 
-This step adds ESLint and Prettier to your project's dependencies so they're available locally regardless of the system configuration.
+This step adds Prettier and the XML plugin to your project's dependencies so they're available locally regardless of the system configuration.
 
 ### Install with `yarn`
 
 ```bash
-yarn add eslint-{config,plugin}-prettier eslint prettier --dev --exact
+yarn add prettier @prettier/plugin-xml --dev --exact
 ```
 
 <details>
 <summary>Install with <code>npm</code></summary>
 
 ```bash
-npm install eslint-{config,plugin}-prettier eslint prettier --save-dev --save-exact
+npm install prettier @prettier/plugin-xml --save-dev --save-exact
 ```
 
 </details>
 
 ### Set up the scripts
 
-Open the [`package.json`](/package.json) file in your project and add the following `scripts`\* entries:
+Open the [`package.json`](/package.json) file in your project and add the following `scripts`\* entries (or copy them from here):
 
 ```json
 "scripts": {
-  "fix:other": "yarn prettier --write",
-  "fix:code": "yarn test:code --fix",
-  "fix": "yarn fix:code && yarn fix:other",
-  "prettier": "prettier \"**/*.{json,md,scss,yaml,yml}\"",
-  "test:other": "yarn prettier --list-different",
-  "test:code": "eslint --ignore-path .gitignore --ignore-path .prettierignore --ext .js,.jsx .",
-  "test": "yarn test:other && yarn test:code"
+  "fix": "yarn prettier --write",
+  "prettier": "prettier \"**/*.{dita,json,md,scss,yaml,yml}\"",
+  "test": "yarn prettier --list-different"
 }
 ```
 
@@ -72,8 +67,7 @@ Add the `precise-commits` and `husky` rules to the [`package.json`](/package.jso
 
 ```json
 "precise-commits": {
-  "*.{js,jsx}": ["eslint --fix"],
-  "*.{json,md,scss,yaml,yml}": ["prettier --write"]
+  "*.{dita,json,md,scss,yaml,yml}": ["prettier --write"]
 },
 "husky": {
   "hooks": {
@@ -111,42 +105,11 @@ This project defines the following settings in the [`.prettierrc.json`](/.pretti
 </details>
 
 <details>
-<summary>ESLint rules</summary>
-
-Adjust your own rules by updating the [`.eslintrc.json`](/.eslintrc.json).
-
-- [`curly`](https://eslint.org/docs/rules/curly)
-- [`dot-notation`](https://eslint.org/docs/rules/dot-notation)
-- [`id-length`](https://eslint.org/docs/rules/id-length)
-- [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign)
-- [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
-- [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
-- [`no-inner-declarations`](https://eslint.org/docs/rules/no-inner-declarations)
-- [`no-lonely-if`](https://eslint.org/docs/rules/no-lonely-if)
-- [`no-magic-numbers`](https://eslint.org/docs/rules/no-magic-numbers)
-- [`no-shadow`](https://eslint.org/docs/rules/no-shadow)
-- [`no-unneeded-ternary`](https://eslint.org/docs/rules/no-unneeded-ternary)
-- [`no-unused-expressions`](https://eslint.org/docs/rules/no-unused-expressions)
-- [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars)
-- [`no-useless-return`](https://eslint.org/docs/rules/no-useless-return)
-- [`no-var`](https://eslint.org/docs/rules/no-var)
-- [`one-var`](https://eslint.org/docs/rules/one-var)
-- [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback)
-- [`prefer-const`](https://eslint.org/docs/rules/prefer-const)
-- [`prefer-promise-reject-errors`](https://eslint.org/docs/rules/prefer-promise-reject-errors)
-- [`sort-imports`](https://eslint.org/docs/rules/sort-imports)
-- [`sort-keys`](https://eslint.org/docs/rules/sort-keys)
-- [`sort-vars`](https://eslint.org/docs/rules/sort-vars)
-- [`strict`](https://eslint.org/docs/rules/strict)
-</details>
-
-<details>
 <summary>Dependencies</summary>
 
-- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
-- [eslint](https://github.com/eslint/eslint)
 - [husky](https://github.com/typicode/husky)
 - [precise-commits](https://github.com/nrwl/precise-commits)
 - [prettier](https://github.com/prettier/prettier)
+- [@prettier/plugin-xml](https://github.com/prettier/plugin-xml)
+
 </details>

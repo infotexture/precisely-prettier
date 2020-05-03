@@ -8,10 +8,7 @@
     "prettier": "2.0.5"
   },
   "precise-commits": {
-    "*.{js,jsx}": [
-      "eslint --fix"
-    ],
-    "*.{json,md,scss,yaml,yml}": [
+    "*.{dita,json,md,scss,yaml,yml}": [
       "prettier --write"
     ]
   },
@@ -21,13 +18,9 @@
     }
   },
   "scripts": {
-    "fix:other": "yarn prettier --write",
-    "fix:code": "yarn test:code --fix",
-    "fix": "yarn fix:code && yarn fix:other",
-    "prettier": "prettier \"**/*.{json,md,scss,yaml,yml}\"",
-    "test:other": "yarn prettier --list-different",
-    "test:code": "eslint --ignore-path .gitignore --ignore-path .prettierignore --ext .js,.jsx .",
-    "test": "yarn test:other && yarn test:code"
+    "fix": "yarn prettier --write",
+    "prettier": "prettier \"**/*.{dita,json,md,scss,yaml,yml}\"",
+    "test": "yarn prettier --list-different"
   },
   "repository": {
     "type": "git",
