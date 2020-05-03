@@ -48,34 +48,34 @@ Open the [`package.json`](/package.json) file in your project and add the follow
 
 ## Installing Husky and commit hooks
 
-Set up Husky and the `lint-staged` commit hooks to format changed files before each commit.
+Set up Husky and the `precise-commits` commit hooks to format changed files before each commit.
 
 ### Install with `yarn`
 
 ```bash
-yarn add husky lint-staged --dev --exact
+yarn add husky precise-commits --dev --exact
 ```
 
 <details><summary>Install with <code>npm</code></summary><p>
 
 ```bash
-npm install husky lint-staged --save-dev --save-exact
+npm install husky precise-commits --save-dev --save-exact
 ```
 
 </p></details>
 
 ### Set up the rules
 
-Add the `lint-staged` and `husky` rules to the [`package.json`](/package.json) file in your project:
+Add the `precise-commits` and `husky` rules to the [`package.json`](/package.json) file in your project:
 
 ```json
-"lint-staged": {
+"precise-commits": {
   "*.{js,jsx}": ["eslint --fix"],
   "*.{json,md,scss,yaml,yml}": ["prettier --write"]
 },
 "husky": {
   "hooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "precise-commits"
   }
 },
 ```
@@ -142,6 +142,6 @@ Adjust your own rules by updating the [`.eslintrc.json`](/.eslintrc.json).
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
 - [eslint](https://github.com/eslint/eslint)
 - [husky](https://github.com/typicode/husky)
-- [lint-staged](https://github.com/okonet/lint-staged)
+- [precise-commits](https://github.com/nrwl/precise-commits)
 - [prettier](https://github.com/prettier/prettier)
   </p></details>
