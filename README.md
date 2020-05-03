@@ -20,13 +20,14 @@ This step adds ESLint and Prettier to your project's dependencies so they're ava
 yarn add eslint-{config,plugin}-prettier eslint prettier --dev --exact
 ```
 
-<details><summary>Install with <code>npm</code></summary><p>
+<details>
+<summary>Install with <code>npm</code></summary>
 
 ```bash
 npm install eslint-{config,plugin}-prettier eslint prettier --save-dev --save-exact
 ```
 
-</p></details>
+</details>
 
 ### Set up the scripts
 
@@ -56,13 +57,14 @@ Set up Husky and the `precise-commits` commit hooks to format changed files befo
 yarn add husky precise-commits --dev --exact
 ```
 
-<details><summary>Install with <code>npm</code></summary><p>
+<details>
+<summary>Install with <code>npm</code></summary>
 
 ```bash
 npm install husky precise-commits --save-dev --save-exact
 ```
 
-</p></details>
+</details>
 
 ### Set up the rules
 
@@ -82,7 +84,8 @@ Add the `precise-commits` and `husky` rules to the [`package.json`](/package.jso
 
 ---
 
-<details><summary>Prettier rules</summary><p>
+<details>
+<summary>Prettier rules</summary>
 
 This project defines the following settings in the [`.prettierrc.json`](/.prettierrc.json) file. You can adjust these values according to your own preferences.
 
@@ -105,9 +108,10 @@ This project defines the following settings in the [`.prettierrc.json`](/.pretti
 
 \* Values in **bold** differ from the Prettier defaults.
 
-</p></details>
+</details>
 
-<details><summary>ESLint rules</summary><p>
+<details>
+<summary>ESLint rules</summary>
 
 Adjust your own rules by updating the [`.eslintrc.json`](/.eslintrc.json).
 
@@ -134,9 +138,10 @@ Adjust your own rules by updating the [`.eslintrc.json`](/.eslintrc.json).
 - [`sort-keys`](https://eslint.org/docs/rules/sort-keys)
 - [`sort-vars`](https://eslint.org/docs/rules/sort-vars)
 - [`strict`](https://eslint.org/docs/rules/strict)
-  </p></details>
+</details>
 
-<details><summary>Dependencies</summary><p>
+<details>
+<summary>Dependencies</summary>
 
 - [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
@@ -144,4 +149,4 @@ Adjust your own rules by updating the [`.eslintrc.json`](/.eslintrc.json).
 - [husky](https://github.com/typicode/husky)
 - [precise-commits](https://github.com/nrwl/precise-commits)
 - [prettier](https://github.com/prettier/prettier)
-  </p></details>
+</details>
