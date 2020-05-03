@@ -99,6 +99,7 @@ This project defines the following settings in the [`.prettierrc.json`](/.pretti
 | [`trailingComma`](https://prettier.io/docs/en/options.html#trailing-commas)                                       | **`all`**   |
 | [`useTabs`](https://prettier.io/docs/en/options.html#tabs)                                                        | `false`     |
 | [`vueIndentScriptAndStyle`](https://prettier.io/docs/en/options.html#vue-files-script-and-style-tags-indentation) | **`true`**  |
+| [`xmlSelfClosingSpace`](https://github.com/prettier/plugin-xml#configuration)                                     | **`false`** |
 
 \* Values in **bold** differ from the Prettier defaults.
 
