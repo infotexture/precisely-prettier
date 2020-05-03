@@ -1,4 +1,6 @@
-# prettier-setup
+# Precisely Prettier
+
+> _Based on [prettier-setup](https://github.com/lipis/prettier-setup) by the amazing [@lipis](https://github.com/lipis)._ 🙏
 
 This project sets up formatting and linting tools to keep your code clean and consistent, so you never have to argue about style again:
 
