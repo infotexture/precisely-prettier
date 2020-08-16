@@ -1,6 +1,21 @@
 {
   "name": "precisely-prettier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infotexture/precisely-prettier"
+  },
   "license": "MIT",
+  "scripts": {
+    "fmt": "yarn format",
+    "format": "yarn prettier --write",
+    "prettier": "prettier \"**/*.{dita*,json,md,scss,xml,yaml,yml}\"",
+    "test": "yarn prettier --list-different"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits"
+    }
+  },
   "devDependencies": {
     "@prettier/plugin-xml": "0.11.0",
     "husky": "4.2.5",
@@ -11,20 +26,5 @@
     "*.{dita,json,md,scss,yaml,yml}": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "precise-commits"
-    }
-  },
-  "scripts": {
-    "fmt": "yarn format",
-    "format": "yarn prettier --write",
-    "prettier": "prettier \"**/*.{dita*,json,md,scss,xml,yaml,yml}\"",
-    "test": "yarn prettier --list-different"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/infotexture/precisely-prettier"
   }
 }
