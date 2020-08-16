@@ -25,10 +25,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@prettier/plugin-xml@0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-0.7.2.tgz#f4b6e7c45a9e36663d403828e380e8a4c6a12106"
-  integrity sha512-c6i6OQ2y9kvWeUTrfkwHy+jdJXI3bpO8TT9EoVjJIEAApj5gLtJ/O2D9qthxWXh5zbipngueDEC2CT6tBZzBdA==
+"@prettier/plugin-xml@0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-xml/-/plugin-xml-0.11.0.tgz#9214c451b2d3f196999b0da28023b4a92024e604"
+  integrity sha512-Dxh0oV+KUMtgI9QmV2UFsZINA8Ac8CFPidL53ZYtm7qC375QJPxWpkn/hI5VmCJvrjUi2qj3S4hFFjKCVjU0AQ==
   dependencies:
     "@xml-tools/parser" "^1.0.2"
     prettier ">=1.10"
