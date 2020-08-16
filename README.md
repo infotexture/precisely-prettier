@@ -5,7 +5,7 @@
 This project sets up formatting tools to keep your code clean and consistent, so you never have to argue about style again:
 
 - [Prettier](https://prettier.io) is an opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules.
-- [Husky](https://github.com/typicode/husky) uses Git hooks to ensure that **Prettier** runs on all staged changes to fix files before committing.
+- [Husky](https://github.com/typicode/husky) uses Git hooks to ensure that **Prettier** runs on all staged changes to format files before committing.
 
 The setup described here will format DITA XML, JSON, Sass, Markdown, and YAML files, but you can adjust the settings to your own needs.
 
@@ -43,9 +43,17 @@ Open the [`package.json`](/package.json) file in your project and add the follow
 
 \* If you are using `npm`, replace `yarn` with `npm run` in the above section.
 
+### Formatting source files
+
+To call the formatting script manually, run `yarn format`.
+
+_If you're one of those impatient types that likes to save keystrokes, you can use the `yarn fmt` alias instead._
+
+But the whole point of this setup is that you shouldn't have to do this sort of thing manually, so read on to automate the process and ensure that any lines you change will be formatted before you commit your changes.
+
 ## Installing Husky and commit hooks
 
-Set up Husky and the `precise-commits` commit hooks to format changed files before each commit.
+Set up Husky and the `precise-commits` commit hooks to format changed lines before each commit.
 
 ### Install with `yarn`
 
@@ -76,6 +84,10 @@ Add the `precise-commits` and `husky` rules to the [`package.json`](/package.jso
   }
 },
 ```
+
+✨ **And now you're good to go.**
+
+Whenever you commit DITA XML, JSON, Sass, Markdown, or YAML files, your changes — and _only_ your changes — will be **Precisely Prettier**. ✨
 
 ---
 
