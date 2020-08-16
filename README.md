@@ -34,7 +34,8 @@ Open the [`package.json`](/package.json) file in your project and add the follow
 
 ```json
 "scripts": {
-  "fix": "yarn prettier --write",
+  "fmt": "yarn format",
+  "format": "yarn prettier --write",
   "prettier": "prettier \"**/*.{dita,json,md,scss,yaml,yml}\"",
   "test": "yarn prettier --list-different"
 }

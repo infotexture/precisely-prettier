@@ -18,7 +18,8 @@
     }
   },
   "scripts": {
-    "fix": "yarn prettier --write",
+    "fmt": "yarn format",
+    "format": "yarn prettier --write",
     "prettier": "prettier \"**/*.{dita,json,md,scss,yaml,yml}\"",
     "test": "yarn prettier --list-different"
   },
