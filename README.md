@@ -45,7 +45,7 @@ Open the [`package.json`](/package.json) file in your project and add the follow
 
 ### Formatting source files
 
-To call the formatting script manually, run `yarn format`.
+To call the formatting script manually, run `yarn format`. (Run it here to format the files in the `test/` folder.)
 
 _If you're one of those impatient types that likes to save keystrokes, you can use the `yarn fmt` alias instead._
 

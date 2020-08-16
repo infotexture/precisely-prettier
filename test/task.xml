@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?><!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+
+                                               <task id="ID">
+<title>Task title</title>
+<shortdesc>Very short description</shortdesc>
+<taskbody>
+<steps>
+<step><cmd>Set up <codeph>precisely-prettier</codeph>.</cmd></step>
+<step><cmd>Run <cmdname>yarn format</cmdname>.</cmd></step>
+<step><cmd>There is no step three.</cmd></step>
+</steps>
+</taskbody>
+</task>
