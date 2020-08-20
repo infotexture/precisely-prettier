@@ -113,6 +113,7 @@ This project defines the following settings in the [`.prettierrc.json`](/.pretti
 | [`useTabs`](https://prettier.io/docs/en/options.html#tabs)                                                        | `false`     |
 | [`vueIndentScriptAndStyle`](https://prettier.io/docs/en/options.html#vue-files-script-and-style-tags-indentation) | **`true`**  |
 | [`xmlSelfClosingSpace`](https://github.com/prettier/plugin-xml#configuration)                                     | **`false`** |
+| [`xmlWhitespaceSensitivity`](https://github.com/prettier/plugin-xml#configuration)                                | `strict`    |
 
 \* Values in **bold** differ from the Prettier defaults.
 
