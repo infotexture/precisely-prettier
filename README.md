@@ -76,7 +76,7 @@ Add the `precise-commits` and `husky` rules to the [`package.json`](/package.jso
 
 ```json
 "precise-commits": {
-  "*.{dita,json,md,scss,yaml,yml}": ["prettier --write"]
+  "*.{dita*,json,md,scss,xml,yaml,yml}": ["prettier --write"]
 },
 "husky": {
   "hooks": {
