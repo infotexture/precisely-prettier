@@ -1,3 +1,7 @@
+⚠️ **Note:** This project has been archived, as [precise-commits](https://github.com/nrwl/precise-commits) is apparently no longer actively maintained. 😢
+
+💡 Use the original [prettier-setup](https://github.com/lipis/prettier-setup) instead, which comes with [lint-staged](https://github.com/okonet/lint-staged) and is regularly updated by [@lipis](https://github.com/lipis). ✨
+
 # Precisely Prettier
 
 > _Based on [prettier-setup](https://github.com/lipis/prettier-setup) by the amazing [@lipis](https://github.com/lipis)._ 🙏
